@@ -1,0 +1,15 @@
+{
+  "name": "totd-score-tracker",
+  "version": "1.0.0",
+  "main": "./src/worker.ts",
+  "scripts": {
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "@cloudflare/workers-types": "^3.13.0"
+  },
+  "dependencies": {
+    "node-match-path": "^0.6.3"
+  }
+}

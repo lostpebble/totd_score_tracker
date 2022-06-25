@@ -1,0 +1,17 @@
+name = "tmza-totd-score-tracker"
+workers_dev = true
+main = "./src/worker.ts"
+compatibility_date = "2022-06-25"
+
+kv_namespaces = [
+    { binding = "TM_TRACKER", id = "7512e633feea4b86a1203fdac279e872", preview_id = "d804c0af1cbe4e1bbebbdb2ff20f6280" }
+]
+
+[durable_objects]
+bindings = [
+    { name = "MAP_REQUEST_DURABLE_WORKER", class_name = "MapScoreRequestDurableWorker" } # Binding to our DurableObjectExample class
+]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["MapScoreRequestDurableWorker"]
